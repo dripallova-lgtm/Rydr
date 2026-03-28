@@ -37,15 +37,22 @@
       align-items: center;
     }
 
-    .book-btn {
-      background: #1e90ff;
-      color: white;
-      padding: 16px 28px;
-      font-size: 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      text-align: center;
-    }
+ .book-btn {
+  background: linear-gradient(135deg, #1e90ff, #0066ff);
+  color: white;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
 
     .learn-more {
       margin-top: 15px;
