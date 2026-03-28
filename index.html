@@ -9,68 +9,53 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("img_0423.jpeg") no-repeat center center fixed;
+      background: url("img_0423.jpeg") no-repeat center center;
       background-size: cover;
       height: 100vh;
     }
 
-    /* RydR Logo */
-    .rydR-logo {
+    /* LOGO (top center, spaced down) */
+    .logo {
       position: absolute;
-      top: 20px;
+      top: 60px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       color: white;
+      letter-spacing: 2px;
     }
 
-    /* City Logo */
-    .city-logo {
+    /* LEFT CENTER PANEL */
+    .left-center {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-    }
-
-    .city-logo img {
-      width: 90px;
-    }
-
-    /* Left Panel */
-    .left-panel {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 300px;
-      background: rgba(0,0,0,0.6);
-      padding: 40px 20px;
-      color: white;
-
+      left: 60px;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
     }
 
     .book-btn {
       background: #1e90ff;
       color: white;
-      padding: 14px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 20px;
+      padding: 16px 28px;
       font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
     }
 
     .learn-more {
       margin-top: 15px;
-      color: #ddd;
+      color: white;
       text-decoration: underline;
       cursor: pointer;
+      text-align: center;
     }
 
-    /* Modal */
+    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -83,52 +68,53 @@
 
     .modal-content {
       background: white;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
       max-width: 400px;
+      text-align: center;
     }
 
     .close {
       float: right;
       cursor: pointer;
+      font-size: 20px;
     }
 
-    /* Mobile Fix */
+    /* MOBILE FIX */
     @media (max-width: 768px) {
-      .left-panel {
-        width: 100%;
-        height: auto;
-        position: relative;
+      .left-center {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .logo {
+        top: 40px;
+        font-size: 26px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <div class="rydR-logo">RydR</div>
+  <!-- LOGO -->
+  <div class="logo">RydR</div>
 
-  <div class="city-logo">
-    <img src="Roc_logo.jpeg">
-  </div>
-
-  <div class="left-panel">
-    <h1>Book Your Ride</h1>
-
+  <!-- LEFT CENTER BUTTON AREA -->
+  <div class="left-center">
     <a href="booking.html" class="book-btn">Book Now</a>
-
-    <div class="learn-more" onclick="openModal()">
-      Learn More
-    </div>
+    <div class="learn-more" onclick="openModal()">Learn More</div>
   </div>
 
+  <!-- MODAL -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">X</span>
       <h2>How It Works</h2>
       <p>
-        Enter your trip details, choose your time, and submit your ride request.
-        A driver will be assigned quickly.
+        Enter your pickup and drop-off, choose your time,
+        and submit your ride. A driver is assigned quickly.
       </p>
     </div>
   </div>
